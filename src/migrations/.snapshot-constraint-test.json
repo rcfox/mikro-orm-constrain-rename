@@ -14,11 +14,30 @@
           "primary": true,
           "nullable": false,
           "mappedType": "integer"
+        },
+        "test": {
+          "name": "test",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "mappedType": "integer"
         }
       },
       "name": "really_really_really_really_really_really_really_really_really_really_long_name",
       "schema": "public",
       "indexes": [
+        {
+          "columnNames": [
+            "test"
+          ],
+          "composite": false,
+          "keyName": "really_really_really_really_really_really_really_re_6001d_index",
+          "constraint": false,
+          "primary": false,
+          "unique": false
+        },
         {
           "keyName": "really_really_really_really_really_really_really__cd945_primary",
           "columnNames": [

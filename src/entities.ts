@@ -1,9 +1,11 @@
 import {
   Collection,
   Entity,
+  Index,
   ManyToMany,
   ManyToOne,
   PrimaryKey,
+  Property,
 } from "@mikro-orm/postgresql";
 
 @Entity()
@@ -24,4 +26,8 @@ export class User {
 export class ReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongName {
   @PrimaryKey()
   id!: number;
+
+  @Index()
+  @Property()
+  test!: number;
 }
