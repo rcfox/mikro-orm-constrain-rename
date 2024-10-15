@@ -1,0 +1,136 @@
+{
+  "namespaces": [
+    "public"
+  ],
+  "name": "public",
+  "tables": [
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "unsigned": true,
+          "autoincrement": true,
+          "primary": true,
+          "nullable": false,
+          "mappedType": "integer"
+        }
+      },
+      "name": "really_really_really_really_really_really_really_really_really_really_long_name",
+      "schema": "public",
+      "indexes": [
+        {
+          "keyName": "really_really_really_really_really_really_really__cd945_primary",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {},
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "unsigned": true,
+          "autoincrement": true,
+          "primary": true,
+          "nullable": false,
+          "mappedType": "integer"
+        }
+      },
+      "name": "user",
+      "schema": "public",
+      "indexes": [
+        {
+          "keyName": "user_pkey",
+          "columnNames": [
+            "id"
+          ],
+          "composite": false,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {},
+      "nativeEnums": {}
+    },
+    {
+      "columns": {
+        "user_id": {
+          "name": "user_id",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "mappedType": "integer"
+        },
+        "really_really_really_really_really_really_really_really_really_really_long_name_id": {
+          "name": "really_really_really_really_really_really_really_really_really_really_long_name_id",
+          "type": "int",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "mappedType": "integer"
+        }
+      },
+      "name": "user_foo",
+      "schema": "public",
+      "indexes": [
+        {
+          "keyName": "user_foo_pkey",
+          "columnNames": [
+            "user_id",
+            "really_really_really_really_really_really_really_really_really_really_long_name_id"
+          ],
+          "composite": true,
+          "constraint": true,
+          "primary": true,
+          "unique": true
+        }
+      ],
+      "checks": [],
+      "foreignKeys": {
+        "user_foo_user_id_foreign": {
+          "constraintName": "user_foo_user_id_foreign",
+          "columnNames": [
+            "user_id"
+          ],
+          "localTableName": "public.user_foo",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "public.user",
+          "deleteRule": "cascade",
+          "updateRule": "cascade"
+        },
+        "user_foo_really_really_really_really_really_reall_d7f01_foreign": {
+          "constraintName": "user_foo_really_really_really_really_really_reall_d7f01_foreign",
+          "columnNames": [
+            "really_really_really_really_really_really_really_really_really_really_long_name_id"
+          ],
+          "localTableName": "public.user_foo",
+          "referencedColumnNames": [
+            "id"
+          ],
+          "referencedTableName": "public.really_really_really_really_really_really_really_really_really_really_long_name",
+          "deleteRule": "cascade",
+          "updateRule": "cascade"
+        }
+      },
+      "nativeEnums": {}
+    }
+  ],
+  "nativeEnums": {}
+}
