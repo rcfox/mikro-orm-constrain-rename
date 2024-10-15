@@ -1,13 +1,13 @@
-# MikroORM reproduction example
+Steps to Reproduce
+==================
 
-This repository serves as a base reproduction example, it contains basic setup with MikroORM 6 with SQLite driver and jest. This is what the main repository is using, and therefore allows for a simple integration to the codebase.
+1. `git checkout 2c636aa3c8943a14441693223c6086211a5c1339`
+2. `yarn install`
+3. `npx mikro-orm-esm migration:up`
+  * This will leave you in the v6.2.9 state
+4. `git checkout 843dc0503b397808301c3d16de6836991794bb07`
+5. `yarn install`
+6. `npx mikro-orm-esm migration:create`
+  * The `src/migrations/.snapshot-constraint-test.json` file will contain a rename of the `user_foo_really_really_really_really_really_real_d7f01_foreign` constraint that is not reflected in the generated migration.
 
-## Few hints for creating your own reproductions
-
-- Focus on reproducing one problem at a time.
-- Set up the data, the test needs to be **self-contained**.
-- Don't use the CLI, do everything programmatically as part of the test.
-- Remove everything unrelated, keep things as simple as possible.
-- Duplication in tests is fine, better than complex abstractions.
-- Comments are fine, asserts are better!
-- If the problem is not driver specific, use in-memory SQLite database.
+You can also see this here: https://github.com/rcfox/mikro-orm-constrain-rename/commit/4e711630a1d8e7a606518311556055393fc4fc8a
