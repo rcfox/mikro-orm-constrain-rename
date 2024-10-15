@@ -9,7 +9,7 @@
         "id": {
           "name": "id",
           "type": "serial",
-          "unsigned": true,
+          "unsigned": false,
           "autoincrement": true,
           "primary": true,
           "nullable": false,
@@ -33,13 +33,13 @@
             "test"
           ],
           "composite": false,
-          "keyName": "really_really_really_really_really_really_really_re_6001d_index",
+          "keyName": "really_really_really_really_really_really_really_r_6001d_index",
           "constraint": false,
           "primary": false,
           "unique": false
         },
         {
-          "keyName": "really_really_really_really_really_really_really__cd945_primary",
+          "keyName": "really_really_really_really_really_really_really_cd945_primary",
           "columnNames": [
             "id"
           ],
@@ -58,7 +58,7 @@
         "id": {
           "name": "id",
           "type": "serial",
-          "unsigned": true,
+          "unsigned": false,
           "autoincrement": true,
           "primary": true,
           "nullable": false,
@@ -134,8 +134,8 @@
           "deleteRule": "cascade",
           "updateRule": "cascade"
         },
-        "user_foo_really_really_really_really_really_reall_d7f01_foreign": {
-          "constraintName": "user_foo_really_really_really_really_really_reall_d7f01_foreign",
+        "user_foo_really_really_really_really_really_real_d7f01_foreign": {
+          "constraintName": "user_foo_really_really_really_really_really_real_d7f01_foreign",
           "columnNames": [
             "really_really_really_really_really_really_really_really_really_really_long_name_id"
           ],
