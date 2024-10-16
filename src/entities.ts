@@ -14,16 +14,17 @@ export class User {
   id!: number;
 
   @ManyToMany(
-    () => ReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongName,
+    () =>
+      DifferentReallyReallyReallyReallyReallyReallyReallyReallyReallyLongName,
   )
   foo =
-    new Collection<ReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongName>(
+    new Collection<DifferentReallyReallyReallyReallyReallyReallyReallyReallyReallyLongName>(
       this,
     );
 }
 
 @Entity()
-export class ReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongName {
+export class DifferentReallyReallyReallyReallyReallyReallyReallyReallyReallyLongName {
   @PrimaryKey()
   id!: number;
 
